@@ -31,9 +31,19 @@ def find_villain(most_chosen_choice: str) -> str:
     elif most_chosen_choice == '2':
         return 'Maleficent'
     elif most_chosen_choice == '3':
-        return 'Jafar'
+        return 'Evil Queen'
     else:
         return 'Ursula'
+
+def corresponding_link_getter(villain: str) -> str:
+    if villain == 'Scar':
+        return f"/static/Scar.jpg"
+    elif villain == 'Maleficent':
+        return f"/static/Maleficent.jpg"
+    elif villain == 'Evil Queen':
+        return f"/static/Evil_Queen.jpg"
+    else:
+        return f"/static/Ursula.jpg"
 
 class user:
     id: int

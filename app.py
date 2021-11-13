@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from helpers import count_points, most_answered, find_villain, user
+from helpers import corresponding_link_getter, count_points, most_answered, find_villain, user
 
 app: Flask = Flask(__name__)
 users: list[user] = []
@@ -35,12 +35,13 @@ def quiz():
         total_points: dict[str, int] = count_points(answer_choices)
         most_chosen_answer: str = most_answered(total_points)
         villain: str = find_villain(most_chosen_answer)
+        image_link: str = corresponding_link_getter(villain)
         new_user: user = user(user_number, fname, lname, villain)
         users.append(new_user)
 
         user_number += 1
 
-        return render_template("result.html", villain=villain)
+        return render_template("result.html", villain=villain, image_link=image_link)
     return render_template("quiz.html")
 
 
