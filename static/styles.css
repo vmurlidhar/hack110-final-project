@@ -1,4 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
+
 p {
-    color: #75c3f7;
+    color: #000080;
     font-size: xx-large;
+    font-family: 'Yuji Syuku', serif;
   }
+
+body {
+  background-color: #7bafd4;
+  max-width: 800px;
+  margin: auto;
+  vertical-align: center;
+  padding: 70px;
+  text-align: center;
+}
+
+label {
+  color: #000080;
+  font-family: 'Yuji Syuku', serif;
+  font-size: larger;
+  font-weight: 1500;
+}
+
+select {
+  font-family: 'Yuji Syuku', serif;
+  text-align: center;
+}
+
+option {
+  font-family: 'Yuji Syuku', serif;
+}
